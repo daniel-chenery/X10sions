@@ -1,4 +1,4 @@
-namespace Extensions.Tests.EnumerableExtensions
+namespace X10sions.Tests.EnumerableExtensions
 {
     public class EmptyTests
     {

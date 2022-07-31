@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{FC1526DF-FCEB-4CFF-A570-F69AFDE4B784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X10sions", "X10sions\X10sions.csproj", "{FC1526DF-FCEB-4CFF-A570-F69AFDE4B784}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions.Tests", "Extensions.Tests\Extensions.Tests.csproj", "{0D434348-388B-479B-8DE4-7DD4597C2CF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X10sions.Tests", "X10sions.Tests\X10sions.Tests.csproj", "{0D434348-388B-479B-8DE4-7DD4597C2CF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
