@@ -18,5 +18,15 @@ namespace X10sions
 
             return !enumerable.Any();
         }
+
+        public static bool EmptyOrNull<T>(this IEnumerable<T> enumerable)
+        {
+            if (enumerable is null)
+            {
+                return true;
+            }
+
+            return !enumerable.Any();
+        }
     }
 }
