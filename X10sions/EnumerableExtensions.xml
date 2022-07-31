@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<common>
+  <typeparam name="T">The type of elements in the enumerable</typeparam>
+  <param name="enumerable">
+    The <see cref="IEnumerable{T}" /> to check
+  </param>
+</common>
