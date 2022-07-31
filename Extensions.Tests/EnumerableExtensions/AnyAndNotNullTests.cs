@@ -1,6 +1,6 @@
-namespace Extensions.Tests
+namespace Extensions.Tests.EnumerableExtensions
 {
-    public partial class EnumerableExtensionsTests
+    public class AnyAndNotNullTests
     {
         [Fact]
         public void AnyAndNotNull_WhenNull_ReturnsFalse()

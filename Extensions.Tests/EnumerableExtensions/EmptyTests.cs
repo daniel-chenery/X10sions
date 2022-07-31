@@ -1,6 +1,6 @@
-namespace Extensions.Tests
+namespace Extensions.Tests.EnumerableExtensions
 {
-    public partial class EnumerableExtensionsTests
+    public class EmptyTests
     {
         [Fact]
         public void Empty_WhenNull_ThrowsArgumentNullException()
