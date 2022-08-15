@@ -18,4 +18,4 @@ jobs:
     - name: Push
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-      run: dotnet push --api-key ${{ env.NUGET_API_KEY }}
+      run: dotnet nuget push --api-key ${{ env.NUGET_API_KEY }}
