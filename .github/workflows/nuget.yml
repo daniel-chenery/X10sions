@@ -14,8 +14,9 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Pack
-      run: dotnet pack X10sions/X10sions.csproj -p:PackageVersion=${{ github.event.release.tag_name }} -p:Configuration=Release --include-symbols --include-source
+      run: dotnet pack X10sions/X10sions.csproj -p:PackageVersion=${{ github.event.release.tag_name }} -p:Configuration=Release -p:SymbolPackageFormat=snupkg --include-symbols --include-source
     - name: Push
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-      run: dotnet nuget push --api-key ${{ env.NUGET_API_KEY }}
+        PACKAGE_PATH: ${{ github.workspace }}/X10sions/bin/Release/X10sions.${{ github.event.release.tag_name }}
+      run: dotnet nuget push ${{ env.PACKAGE_PATH }}.nupkg --api-key ${{ env.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
