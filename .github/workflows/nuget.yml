@@ -16,6 +16,6 @@ jobs:
     - name: Pack
       run: dotnet pack X10sions/X10sions.csproj -p:PackageVersion=${{ github.event.release.tag_name }} -p:Configuration=Release --include-symbols --include-source
     - name: Push
-      with:
+      env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-      run: dotnet push --api-key ${{ secrets.NUGET_API_KEY }}
+      run: dotnet push --api-key ${{ env.NUGET_API_KEY }}
