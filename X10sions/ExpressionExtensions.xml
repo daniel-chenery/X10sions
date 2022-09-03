@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<common>
+  <exception cref="ArgumentNullException">
+    <paramref name="expression" /> is null
+  </exception>
+  <example>
+    <code>
+      if(string.IsNullEmpty(string.Empty).Invert())
+      {
+      Console.WriteLine("String is empty")
+      }
+    </code>
+  </example>
+</common>
