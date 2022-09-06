@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X10sions", "X10sions\X10sio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X10sions.Tests", "X10sions.Tests\X10sions.Tests.csproj", "{0D434348-388B-479B-8DE4-7DD4597C2CF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X10sions.Benchmarks", "X10sions.Benchmarks\X10sions.Benchmarks.csproj", "{10A61097-F78C-4BC9-8A40-898EC0409537}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0D434348-388B-479B-8DE4-7DD4597C2CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D434348-388B-479B-8DE4-7DD4597C2CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D434348-388B-479B-8DE4-7DD4597C2CF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10A61097-F78C-4BC9-8A40-898EC0409537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A61097-F78C-4BC9-8A40-898EC0409537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A61097-F78C-4BC9-8A40-898EC0409537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A61097-F78C-4BC9-8A40-898EC0409537}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
