@@ -9,6 +9,10 @@ namespace X10sions.Benchmarks
         public readonly Func<bool> True = () => true;
         public readonly Func<object?, bool> IsNull = (o) => o is null;
 
+        public delegate bool Inverted();
+
+        public delegate bool InvertedT1<T>(T arg);
+
         [Benchmark]
         public Func<bool> CompiledExpression()
         {
@@ -25,6 +29,18 @@ namespace X10sions.Benchmarks
         public Func<bool> NegatedInvoke()
         {
             return () => !True();
+        }
+
+        [Benchmark]
+        public Func<bool> NamedFunction()
+        {
+            return Invert(True);
+        }
+
+        [Benchmark]
+        public Inverted NamedDelegate()
+        {
+            return new Inverted(() => !True());
         }
 
         [Benchmark]
@@ -45,6 +61,34 @@ namespace X10sions.Benchmarks
         public Func<object?, bool> NegatedInvokeWithArg()
         {
             return (o) => !IsNull(o);
+        }
+
+        [Benchmark]
+        public Func<object?, bool> NamedFunctionWithArg()
+        {
+            return Invert(IsNull);
+        }
+
+        [Benchmark]
+        public InvertedT1<object?> NamedDelegateWithArg()
+        {
+            return new InvertedT1<object?>((o) => !IsNull(o));
+        }
+
+        [Benchmark]
+        public Predicate<object?> PredicateWithArg()
+        {
+            return new Predicate<object?>((o) => !IsNull(o));
+        }
+
+        private static Func<bool> Invert(Func<bool> func)
+        {
+            return () => !func();
+        }
+
+        private static Func<T, bool> Invert<T>(Func<T, bool> func)
+        {
+            return (arg) => !func(arg);
         }
     }
 }
