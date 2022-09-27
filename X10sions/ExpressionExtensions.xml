@@ -5,10 +5,17 @@
   </exception>
   <example>
     <code>
-      if(string.IsNullEmpty(string.Empty).Invert())
+      <![CDATA[
+      var names = new List<string>
       {
-      Console.WriteLine("String is empty")
-      }
+        "Bobby",
+        null,
+        "Billy",
+        string.Empty
+      };
+
+      var namesWithValues = names.Where(string.IsNullOrEmpty.Invert);
+      ]]>
     </code>
   </example>
 </common>

@@ -25,7 +25,7 @@ namespace X10sions.Benchmarks
             return compiled;
         }
 
-        [Benchmark]
+        [Benchmark(Baseline = true)]
         public Func<bool> NegatedInvoke()
         {
             return () => !True();
