@@ -1,47 +1,10 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
 
-namespace X10sions.Tests
+namespace X10sions.Tests.ExpressionExtensions
 {
-    public class ExpressionExtensionTests
+    public class InvertT1Tests
     {
-        [Fact]
-        public void Invert_WhenNull_ThrowsArgumentException()
-        {
-            // Act
-            var act = () => default(Expression<Func<bool>>).Invert();
-
-            // Assert
-            var exception = Assert.Throws<ArgumentNullException>(act);
-            Assert.Equal("expression", exception.ParamName);
-        }
-
-        [Fact]
-        public void Invert_WhenFalse_ReturnsTrue()
-        {
-            // Arrange
-            Expression<Func<bool>> expression = () => false;
-
-            // Act
-            var inverted = expression.Invert();
-
-            // Assert
-            Assert.True(inverted.Compile()());
-        }
-
-        [Fact]
-        public void Invert_WhenTrue_ReturnsFalse()
-        {
-            // Arrange
-            Expression<Func<bool>> expression = () => true;
-
-            // Act
-            var inverted = expression.Invert();
-
-            // Assert
-            Assert.False(inverted.Compile()());
-        }
-
         [Theory]
         [MemberData(nameof(GenericData))]
         [SuppressMessage("Usage", "xUnit1026:Theory methods should use all of their parameters", Justification = "Argument required for generic type.")]
