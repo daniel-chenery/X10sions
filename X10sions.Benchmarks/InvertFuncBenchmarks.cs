@@ -1,9 +1,13 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Jobs;
 using System.Linq.Expressions;
 
 namespace X10sions.Benchmarks
 {
     [MemoryDiagnoser(false)]
+    [SimpleJob(RuntimeMoniker.Net48)]
+    [SimpleJob(RuntimeMoniker.Net60)]
+    [SimpleJob(RuntimeMoniker.Net70)]
     public class InvertFuncBenchmarks
     {
         public readonly Func<bool> True = () => true;
