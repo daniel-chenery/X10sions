@@ -1,15 +1,30 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AnalysisLevel>latest-all</AnalysisLevel>
+    <RepositoryUrl>https://github.com/daniel-chenery/X10sions</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageIcon>X10-Logo-128.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="X10-Logo-128.png" Pack="true" PackagePath="\"></None>
+  </ItemGroup>
 
   <ItemGroup>
     <AssemblyAttribute Include="System.CLSCompliant">
       <_Parameter1>true</_Parameter1>
       <_Parameter1_TypeName>System.Boolean</_Parameter1_TypeName>
     </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
