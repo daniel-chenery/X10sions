@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<common>
+  <exception cref="ArgumentNullException">
+    <paramref name="expression" /> is null
+  </exception>
+  <example>
+    <code>
+      <![CDATA[
+      var names = new List<string>
+      {
+        "Bobby",
+        null,
+        "Billy",
+        string.Empty
+      };
+
+      var namesWithValues = names.Where(string.IsNullOrEmpty.Invert);
+      ]]>
+    </code>
+  </example>
+</common>

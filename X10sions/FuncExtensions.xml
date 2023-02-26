@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<common>
+  <exception cref="ArgumentNullException">
+    <paramref name="func" /> is null
+  </exception>
+  <example>
+    <code>
+      <![CDATA[>
+      if(string.IsNullEmpty(string.Empty).Invert())
+      {
+        Console.WriteLine("String is empty")
+      }
+      ]]>
+    </code>
+  </example>
+</common>
