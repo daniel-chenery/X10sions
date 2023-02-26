@@ -4,7 +4,6 @@
     <paramref name="func" /> is null
   </exception>
   <example>
-    hello
     <code>
       <![CDATA[>
       if(string.IsNullEmpty(string.Empty).Invert())

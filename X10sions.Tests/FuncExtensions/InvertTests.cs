@@ -10,7 +10,7 @@
 
             // Assert
             var exception = Assert.Throws<ArgumentNullException>(act);
-            Assert.Equal("expression", exception.ParamName);
+            Assert.Equal("func", exception.ParamName);
         }
 
         [Fact]
