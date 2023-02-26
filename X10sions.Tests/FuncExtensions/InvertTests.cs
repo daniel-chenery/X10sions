@@ -1,42 +1,41 @@
-﻿namespace X10sions.Tests.FuncExtensions
+﻿namespace X10sions.Tests.FuncExtensions;
+
+public class InvertTests
 {
-    public class InvertTests
+    [Fact]
+    public void Invert_WhenNull_ThrowsArgumentException()
     {
-        [Fact]
-        public void Invert_WhenNull_ThrowsArgumentException()
-        {
-            // Act
-            var act = () => default(Func<bool>).Invert();
+        // Act
+        var act = () => default(Func<bool>).Invert();
 
-            // Assert
-            var exception = Assert.Throws<ArgumentNullException>(act);
-            Assert.Equal("func", exception.ParamName);
-        }
+        // Assert
+        var exception = Assert.Throws<ArgumentNullException>(act);
+        Assert.Equal("func", exception.ParamName);
+    }
 
-        [Fact]
-        public void Invert_WhenFalse_ReturnsTrue()
-        {
-            // Arrange
-            Func<bool> func = () => false;
+    [Fact]
+    public void Invert_WhenFalse_ReturnsTrue()
+    {
+        // Arrange
+        Func<bool> func = () => false;
 
-            // Act
-            var inverted = func.Invert();
+        // Act
+        var inverted = func.Invert();
 
-            // Assert
-            Assert.True(inverted());
-        }
+        // Assert
+        Assert.True(inverted());
+    }
 
-        [Fact]
-        public void Invert_WhenTrue_ReturnsFalse()
-        {
-            // Arrange
-            Func<bool> func = () => true;
+    [Fact]
+    public void Invert_WhenTrue_ReturnsFalse()
+    {
+        // Arrange
+        Func<bool> func = () => true;
 
-            // Act
-            var inverted = func.Invert();
+        // Act
+        var inverted = func.Invert();
 
-            // Assert
-            Assert.False(inverted());
-        }
+        // Assert
+        Assert.False(inverted());
     }
 }
