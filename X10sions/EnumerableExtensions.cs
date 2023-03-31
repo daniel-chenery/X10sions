@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace X10sions
 {
-    public static class EnumerableExtensions
+    public static partial class EnumerableExtensions
     {
         /// <summary>
         /// Determines if an enumerable is not null and contains any elements
