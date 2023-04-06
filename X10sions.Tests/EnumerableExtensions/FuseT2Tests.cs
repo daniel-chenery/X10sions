@@ -1,5 +1,5 @@
 ﻿namespace X10sions.Tests.EnumerableExtensions;
-public class FuseTests
+public class FuseT2Tests
 {
     [Fact]
     public void Fuse_WhenFirstEnumerableNull_ThrowsArgumentNullException()
