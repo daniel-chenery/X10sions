@@ -33,7 +33,7 @@ namespace X10sions
         }
 
         /// <summary>
-        /// Determines if an enuerable is empty or null
+        /// Determines if an enumerable is empty or null
         /// </summary>
         /// <returns>True when null or empty, otherwise false</returns>
         /// <seealso cref="Empty{T}(IEnumerable{T})"/>
