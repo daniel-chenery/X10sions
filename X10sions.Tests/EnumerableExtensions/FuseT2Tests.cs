@@ -1,14 +1,14 @@
 ﻿namespace X10sions.Tests.EnumerableExtensions;
-public class CombineTests
+public class FuseTests
 {
     [Fact]
-    public void Combine_WhenFirstEnumerableNull_ThrowsArgumentNullException()
+    public void Fuse_WhenFirstEnumerableNull_ThrowsArgumentNullException()
     {
         // Arrange
         var enumerable = default(IEnumerable<object>);
 
         // Act
-        var act = () => enumerable.Combine(default(IEnumerable<object>)).ToList();
+        var act = () => enumerable.Fuse(default(IEnumerable<object>)).ToList();
 
         // Assert
         var exception = Assert.Throws<ArgumentNullException>(() => act());
@@ -16,13 +16,13 @@ public class CombineTests
     }
 
     [Fact]
-    public void Combine_WhenSecondEnumerableNull_ThrowsArgumentNullException()
+    public void Fuse_WhenSecondEnumerableNull_ThrowsArgumentNullException()
     {
         // Arrange
         var enumerable = Enumerable.Empty<object>();
 
         // Act
-        var act = () => enumerable.Combine(default(IEnumerable<object>)).ToList();
+        var act = () => enumerable.Fuse(default(IEnumerable<object>)).ToList();
 
         // Assert
         var exception = Assert.Throws<ArgumentNullException>(() => act());
@@ -30,14 +30,14 @@ public class CombineTests
     }
 
     [Fact]
-    public void Combine_WhenFirstEnumerableIsSmaller_ThrowsArgumentOutOfRangeException()
+    public void Fuse_WhenFirstEnumerableIsSmaller_ThrowsArgumentOutOfRangeException()
     {
         // Arrange
         var first = Enumerable.Repeat("Hello World", 1);
         var second = Enumerable.Repeat("Hello World", 2);
 
         // Act
-        var act = () => first.Combine(second).ToList();
+        var act = () => first.Fuse(second).ToList();
 
         // Assert
         var exception = Assert.Throws<ArgumentOutOfRangeException>(() => act());
@@ -45,14 +45,14 @@ public class CombineTests
     }
 
     [Fact]
-    public void Combine_WhenSecondEnumerableIsSmaller_ThrowsArgumentOutOfRangeException()
+    public void Fuse_WhenSecondEnumerableIsSmaller_ThrowsArgumentOutOfRangeException()
     {
         // Arrange
         var first = Enumerable.Repeat("Hello World", 2);
         var second = Enumerable.Repeat("Hello World", 1);
 
         // Act
-        var act = () => first.Combine(second).ToList();
+        var act = () => first.Fuse(second).ToList();
 
         // Assert
         var exception = Assert.Throws<ArgumentOutOfRangeException>(() => act());
@@ -60,14 +60,14 @@ public class CombineTests
     }
 
     [Fact]
-    public void Combine_WhenEnumerablesEqualLength_ReturnsTupleOfBothEnumerableValues()
+    public void Fuse_WhenEnumerablesEqualLength_ReturnsTupleOfBothEnumerableValues()
     {
         // Arrange
         var first = new[] { "Hello", "World" };
         var second = new[] { "Howdy", "Y'all" };
 
         // Act
-        var combined = first.Combine(second).ToList();
+        var combined = first.Fuse(second).ToList();
 
         // Assert
         Assert.Equal("Hello", combined[0].Item1);

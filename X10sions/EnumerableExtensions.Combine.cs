@@ -5,7 +5,7 @@ namespace X10sions
 {
     public static partial class EnumerableExtensions
     {
-        public static IEnumerable<ValueTuple<T1, T2>> Combine<T1, T2>(this IEnumerable<T1> first, IEnumerable<T2> second)
+        public static IEnumerable<ValueTuple<T1, T2>> Fuse<T1, T2>(this IEnumerable<T1> first, IEnumerable<T2> second)
         {
             if (first is null)
             {
