@@ -6,7 +6,7 @@ A collection of time-saving utility methods you'd probably just copy from projec
 Installing
 ==========
 
-Just install the package from `NuGet <https://www.nuget.org/packages/X10sions>`.
+Just install the package from `NuGet <https://www.nuget.org/packages/X10sions>`_.
 All extension methods are located under the `X10sions` namespace.
 
 Examples
